@@ -1,1 +1,88 @@
 /* Autres règles ici */
+main{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 15px; 
+}
+section#belkacem-pic-container{
+    height: 100%;
+    position: relative;
+    width: 100%;
+    border-bottom: 4px solid rgb(251, 191, 36);
+    margin-bottom: 30px;
+    max-width: 500px;
+    min-height: 300px;
+}
+section#belkacem-pic-container > img.ideas-vibe, section#belkacem-pic-container > img.belkacem-pic{
+    position: absolute;
+}
+section#belkacem-pic-container > img.ideas-vibe{
+    top: -8%;
+    width: 50%;
+    left: 5%;
+}
+section#belkacem-pic-container > img.belkacem-pic{
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 90%;
+}
+main > section#intro-container{
+    width: 100%;
+    max-width: 500px;
+}
+#intro-container > h2{
+    line-height: 0.5em;
+    font-weight: 500;
+}
+#intro-container > h1{
+    color: rgb(251, 191, 36);
+    font-size: 40px;
+}
+#intro-container > p{
+    margin-bottom: 1em;
+}
+#intro-container > q{
+    font-weight: 500;
+    font-size: 1.3em;
+}
+/* On va changer les open et close quotes par défaut*/
+#intro-container > q::before,  #intro-container > q::after{
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-size: cover;
+}
+#intro-container > q::before{
+    background-image: url('../icons/open-quote.svg');
+    margin-right: 5px;
+}
+#intro-container > q::after{
+    background-image: url('../icons/close-quote.svg');
+    margin-left: 5px;
+}
+
+@media screen and (min-width: 600px){
+    section#belkacem-pic-container{
+        min-height: 500px;
+    }
+}
+@media screen and (min-width: 1030px){
+    section#belkacem-pic-container{
+        border-bottom: none;
+        margin-bottom: none;
+        width: 50%;
+        max-width:none;
+    }
+    .screen-container{
+        height: 100vh;
+    }
+    #intro-container > q {
+        position: relative;
+        left: -30px;
+    }
+}
