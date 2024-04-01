@@ -10,11 +10,11 @@ strong{
 
 body {
     font-family: 'Poppins',Arial, sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.5;
     color: white;
     background-color: rgb(9,6,45);
-    max-width: 2600px;
+    
 }
 
 a {
@@ -99,6 +99,10 @@ header > nav{
     top: 30px;
     width: 100%;
 }
+header img#mobile-menu{
+    height: 30px;
+    width: auto;
+}
 /*Fin pour le header*/
 /*Footer début*/
 footer{
@@ -114,9 +118,18 @@ footer #github-icon{
     top: 10px;
 }
 /*Footer fin*/
+@media screen and (min-width: 500px){
+    body{
+        font-size: 20px;
+    }
+}
 @media screen and (min-width: 600px){
     footer{
         padding: 30px 60px;
+    }
+    header img#mobile-menu{
+        height: auto;
+        width: auto;
     }
 }
 @media screen and (min-width: 1024px){
@@ -131,6 +144,11 @@ footer #github-icon{
     }
     a.header-btn{
         display: block;
+    }
+}
+@media screen and (min-width: 1500px){
+    body{
+        font-size: 30px;
     }
 }
 
