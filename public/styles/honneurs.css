@@ -1,0 +1,108 @@
+.screen-container{
+    min-height: 100vh;
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 30px;
+    
+}
+main > figure {
+    width: 100%;
+    max-width: 530px;
+    border-radius: 16.18px;
+    padding: 10px;
+    border: 3px solid rgb(251, 191, 36);
+    flex-shrink: 0;
+}
+main > figure > figcaption{
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    background-color: rgb(251, 191, 36);
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+main > figure > img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+main>section#bio-container1>h1{
+    color: rgb(251, 191, 36);
+    font-size: 1.5em;
+    width: 100%;
+}
+section#bio-container1>p{
+    text-indent: 20px;
+    
+}
+section#bio-container1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    align-items: center;
+}
+div.awards-container{
+    width: 100%;
+    overflow: hidden;
+    align-items: end;
+}
+section#awards{
+    display: flex;
+    animation: scroll 30s linear infinite;
+    gap: 30px;
+}
+section#awards > article.award{
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(251, 191, 36);
+    width: 300px;
+    text-align: center;
+    line-height: 1em;
+    gap: 10px;
+}
+article.award > h1, article.award > h2{
+    font-size: 1em;
+}
+
+@media screen and (min-width: 1024px){
+    section#bio-container1{
+        width: 40%;
+    }
+}
+
+
+@media screen and (min-width: 1500px){
+    .screen-container{
+        height: 100vh;
+    }
+    main{
+        height: 100%;
+    }
+    section#bio-container1{
+        max-width: 750px
+    }
+    
+}
+
+/*animation pour scroller les awards */
+@keyframes scroll {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(calc(100vw - 4750px));/* 300*14+30*13 + taille d'écran(100vw) - padding(30*2) - (une valeur pour la bonne lectrure)*/
+    }
+}
+

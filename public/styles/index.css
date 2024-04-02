@@ -2,10 +2,11 @@
 main{
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     padding: 0 15px; 
+    margin-bottom: 60px;
 }
 section#belkacem-pic-container{
     height: 100%;
@@ -40,7 +41,7 @@ main > section#intro-container{
 }
 #intro-container > h1{
     color: rgb(251, 191, 36);
-    font-size: 40px;
+    font-size: 1.5em;
 }
 #intro-container > p{
     margin-bottom: 1em;
@@ -72,6 +73,9 @@ main > section#intro-container{
     }
 }
 @media screen and (min-width: 1030px){
+    main{
+        margin-bottom: 0;
+    }
     section#belkacem-pic-container{
         border-bottom: none;
         margin-bottom: none;
@@ -84,5 +88,10 @@ main > section#intro-container{
     #intro-container > q {
         position: relative;
         left: -30px;
+    }
+}
+@media screen and (min-width: 1500px){
+    main > section#intro-container{
+        max-width: 600px;
     }
 }
