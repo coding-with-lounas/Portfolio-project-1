@@ -53,6 +53,7 @@ section#bio-container1{
 div.awards-container{
     width: 100%;
     overflow: hidden;
+    align-items: end;
 }
 section#awards{
     display: flex;
